@@ -9,6 +9,8 @@ const Home = () => {
     try {
       e.preventDefault();
 
+      if (!content) return;
+
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -16,7 +18,7 @@ const Home = () => {
           messages: [
             {
               role: "user",
-              content: "오늘 점심 메뉴 추천해줘",
+              content,
             },
           ],
         },
