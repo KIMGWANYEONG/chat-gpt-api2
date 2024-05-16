@@ -64,17 +64,17 @@ const Home = () => {
   };
 
   return (
-    <div className="mt-8 flex flex-col items-center">
+    <div className="mt-10 mb-10 max-h-screen flex flex-col items-center">
       <form className="flex" onSubmit={onSubmitChat}>
         <input
-          className="text-2xl p-2 focus:outline-none rounded-lg border-2 border-pink-200 focus:border-pink-400"
+          className="mt-6 text-2xl p-2 focus:outline-none rounded-lg border-2 border-gray-200 focus:border-gray-400"
           type="text"
           value={content}
           disabled={isLoading}
           onChange={(e) => setContent(e.target.value)}
         />
         <button
-          className="ml-4 flex items-center bg-pink-400 text-2xl px-4 py-[10px] rounded-full shadow-md shadow-pink-200 hover:bg-pink-500"
+          className="mt-6 ml-4 flex items-center bg-gray-50 text-2xl px-4 py-[10px] rounded-full shadow-md shadow-gray-200 hover:bg-gray-200"
           type="submit"
           disabled={isLoading}
         >
@@ -86,7 +86,7 @@ const Home = () => {
           검색
         </button>
       </form>
-      <ul className="mt-8 px-4 flex flex-col gap-4">
+      <ul className="mt-10 px-10 max-screen-h flex flex-col gap-4">
         {chatlist.map((v, i) => (
           <ChatlistCard key={i} question={v.question} answer={v.answer} />
         ))}

@@ -9,7 +9,7 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="px-2 py-4 flex justify-center gap-8 shadow-md">
+    <header className="bg-green-500 px-2 py-4 flex justify-center gap-8 shadow-md">
       <Link
         className={`link-style ${location.pathname === "/" && "text-gray-900"}`}
         to="/"
@@ -22,7 +22,7 @@ const Header = () => {
         }`}
         to="/chat-list"
       >
-        내 질문리스트
+        질문내역
       </Link>
     </header>
   );
